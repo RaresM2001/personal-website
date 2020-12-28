@@ -13,13 +13,9 @@ export default {
       toggleNavigation: false
     }
   },
-  mounted() {
-    console.log(this.$store.state.isNavigationVisible);
-  },
   methods: {
     showNavbar() {
       this.$store.commit('show')
-      console.log(this.$store.state.isNavigationVisible)
     }
   }
 };

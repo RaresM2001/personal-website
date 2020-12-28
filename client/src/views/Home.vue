@@ -6,8 +6,9 @@
       <div class="overlay"></div>
       <div class="container">
         <h1 class="title glitch" data-text="MODURE RARES"><span>MODURE</span> RARES</h1>
-        <p class="subtitle">web developer | computer science & economics student</p>
-
+        <div style="height: 20px">
+           <p class="subtitle"><typical class="vt-subTitle" :steps="['web | mobile developer', 1000, 'computer science & economics student at FSEGA', 1000, 'professional keyboard stroker', 1000, 'casual internet surfer', 1000, '']" :loop=10000 :wrapper="'p'"></typical></p>
+        </div>
         <div id="social-meida-container">
           <unicon width="30" height="30" class="icon" name="instagram" />
           <unicon width="30" height="30" class="icon" name="linkedin-alt" />
@@ -22,11 +23,13 @@
 <script>
 import Navigation from '../components/Navigation';
 import Contact from '../components/Contact';
+import typical from 'vue-typical'
 
 export default {
   components: {
     Navigation,
-    Contact
+    Contact,
+    typical
   }
 }
 </script>

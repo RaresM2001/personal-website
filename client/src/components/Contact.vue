@@ -3,13 +3,15 @@
     <div class="container">
        <unicon class="icon" name="times" width="50" height="50" @click="hideNavigation"/>
       <h1 class="title glitch" data-text="CONTACT ME"><span>CONTACT</span> ME</h1>
-      <form id="contact-form">
-        <input type="text" placeholder="your name" v-model="message.name">
-        <input type="email" placeholder="your email address" v-model="message.from">
-        <textarea placeholder="the reason you contact me" v-model="message.content"></textarea>
-      </form>
+     
+      <input type="text" placeholder="your name" v-model="message.name">
+      <input type="email" placeholder="your email address" v-model="message.from">
+      <textarea placeholder="what can i do for you" v-model="message.content"></textarea>
+      <button class="m-btn" @click="send">CONTACT</button>
+      <div class="clearfix"></div>
+      <img id="signature" src="../assets/images/signature.png" alt="Image not found">
     </div>
-    <img id="signature" src="../assets/images/signature.png" alt="Image not found">
+   
   </div>
 </template>
 <script>
@@ -25,10 +27,10 @@ export default {
   },
   methods: {
     hideNavigation() {
-      this.$store.commit('show')
+      this.$store.commit('show');
     },
     send() {
-      console.log(message)
+      console.log(this.message);
     }
   }
 }
@@ -36,7 +38,7 @@ export default {
 <style scoped>
 .contact {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   top: -100vh;
   z-index: 4;
@@ -57,6 +59,7 @@ export default {
   transition: all .4s;
   cursor: pointer;
   margin-bottom: 50px;
+  margin-right: 0px;
   float: right;
   z-index: 199;
 }
@@ -82,15 +85,19 @@ textarea {
   margin-right: 40%;
 }
 
+textarea {
+  height: 300px;
+  padding: 30px 0 0 30px;
+  resize: none;
+}
+
 input:focus,
 textarea:focus {
   border: 2px solid var(--primary);
 }
 
-textarea {
-  height: 300px;
-  padding: 30px 0 0 30px;
-  resize: none;
+button {
+  float: left;
 }
 
 ::placeholder {
@@ -99,11 +106,14 @@ textarea {
 }
 
 #signature {
-  width: 250px;
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 150px;
+  margin-left: calc(50% - 75px);
+  margin-top: 200px;
+}
+
+.clearfix {
+  content: "";
+  clear: both;
 }
 
 </style>

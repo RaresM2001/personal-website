@@ -60,6 +60,26 @@ span {
   cursor: pointer;
 }
 
+.m-btn {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  font-family: 'Bebas Neue';
+  font-size: 1.5em;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.m-btn:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
 .glitch:before,
 .glitch:after {
   content: attr(data-text);
