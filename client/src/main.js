@@ -5,6 +5,7 @@ import store from './store'
 
 require('./config/glitch');
 require('./config/unicons');
+require('./config/axios');
 
 Vue.config.productionTip = false
 

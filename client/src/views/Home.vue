@@ -10,9 +10,9 @@
            <p class="subtitle"><typical class="vt-subTitle" :steps="['web | mobile developer', 1000, 'computer science & economics student at FSEGA', 1000, 'professional keyboard stroker', 1000, 'casual internet surfer', 1000, '']" :loop=10000 :wrapper="'p'"></typical></p>
         </div>
         <div id="social-meida-container">
-          <unicon width="30" height="30" class="icon" name="instagram" />
-          <unicon width="30" height="30" class="icon" name="linkedin-alt" />
-          <unicon width="30" height="30" class="icon" name="github" />
+          <a href="https://www.instagram.com/modurerares/"><unicon width="30" height="30" class="icon" name="instagram" /></a>
+          <a href="https://www.linkedin.com/in/modure-rares-778b16170/"><unicon width="30" height="30" class="icon" name="linkedin-alt" /></a>
+          <a href="https://github.com/RaresM2001"><unicon width="30" height="30" class="icon" name="github" /></a>
         </div>
         <img id="signature" src="../assets/images/signature.png" alt="image not found">
       </div>

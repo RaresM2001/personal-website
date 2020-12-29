@@ -5,7 +5,7 @@
       <h1 class="title glitch" data-text="CONTACT ME"><span>CONTACT</span> ME</h1>
      
       <input type="text" placeholder="your name" v-model="message.name">
-      <input type="email" placeholder="your email address" v-model="message.from">
+      <input type="email" placeholder="your email address" v-model="message.email">
       <textarea placeholder="what can i do for you" v-model="message.content"></textarea>
       <button class="m-btn" @click="send">CONTACT</button>
       <div class="clearfix"></div>
@@ -20,7 +20,7 @@ export default {
     return {
       message: {
         name: '',
-        from: '',
+        email: '',
         content: ''
       }
     }
@@ -29,8 +29,17 @@ export default {
     hideNavigation() {
       this.$store.commit('show');
     },
-    send() {
-      console.log(this.message);
+    async send() {
+      let result = await axios.post('http://localhost:8082/mailgun/', {
+        data: {
+          from: `${this.message.name} <${this.message.email}>`,
+          subject: 'Client Contact',
+          text: this.message.content,
+          to: 'm.rares956@yahoo.com',
+        }
+      });
+
+      console.log(result);
     }
   }
 }
