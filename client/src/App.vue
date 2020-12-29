@@ -22,6 +22,19 @@ body {
   padding: 0;
 }
 
+.icon {
+  fill: white;
+  float: left;
+  margin-right: 50px;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: var(--primary);
+}
+
+
 .container {
     width: 100%;
   max-width: 1000px;

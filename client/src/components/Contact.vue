@@ -1,7 +1,7 @@
 <template>
   <div class="contact" :class="{visible: $store.state.isNavigationVisible}">
     <div class="container">
-       <unicon class="icon" name="times" width="50" height="50" @click="hideNavigation"/>
+      <unicon class="icon" name="times" width="50" height="50" @click="hideNavigation"/>
       <h1 class="title glitch" data-text="CONTACT ME"><span>CONTACT</span> ME</h1>
      
       <input type="text" placeholder="your name" v-model="message.name">
@@ -39,7 +39,7 @@ export default {
         }
       });
 
-      console.log(result);
+      this.$router.push({name: 'message-sent'})
     }
   }
 }

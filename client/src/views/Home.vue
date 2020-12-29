@@ -56,18 +56,6 @@ export default {
   margin-top: 30px;
 }
 
-.icon {
-  fill: white;
-  float: left;
-  margin-right: 50px;
-  transition: all .4s;
-  cursor: pointer;
-}
-
-.icon:hover {
-  fill: var(--primary);
-}
-
 #signature {
   width: 250px;
   margin-top: 100px;

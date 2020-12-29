@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import MessageSent from '../views/contact/MessageSent.vue' 
 
 Vue.use(VueRouter)
 
@@ -10,6 +11,7 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  { path: '/message_sent', name: 'message-sent', component: MessageSent }
 ]
 
 const router = new VueRouter({
