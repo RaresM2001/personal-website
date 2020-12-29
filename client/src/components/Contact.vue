@@ -8,14 +8,18 @@
       <textarea placeholder="what can i do for you" v-model="message.content"></textarea>
       <button class="m-btn" @click="send">CONTACT</button>
        <div class="clearfix"></div>
-      <img id="signature" src="../assets/images/signature.png" alt="Image not found">
-     
+      <mfooter></mfooter>
     </div>
    
   </div>
 </template>
 <script>
+import environment from '../config/environment';
+import mfooter from '../components/Footer';
 export default {
+  components: {
+    mfooter
+  },
   data() {
     return {
       message: {
@@ -30,7 +34,7 @@ export default {
       this.$store.commit('show');
     },
     async send() {
-      let result = await axios.post('http://localhost:8082/mailgun/', {
+      let result = await axios.post(`${environment.getApiUrl()}/mailgun/`, {
         data: {
           from: `${this.message.name} <${this.message.email}>`,
           subject: 'Client Contact',
