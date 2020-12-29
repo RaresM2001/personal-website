@@ -5,18 +5,24 @@
       <Navigation />
       <div class="overlay"></div>
       <div class="container">
-        <h1 class="title glitch" data-text="MODURE RARES"><span>MODURE</span> RARES</h1>
-        <div style="height: 20px">
-           <p class="subtitle"><typical class="vt-subTitle" :steps="['web | mobile developer', 1000, 'computer science & economics student at FSEGA', 1000, 'professional keyboard stroker', 1000, 'casual internet surfer', 1000, '']" :loop=10000 :wrapper="'p'"></typical></p>
+        <div id="title-container">
+          <h1 class="title glitch" data-text="MODURE RARES"><span>MODURE</span> RARES</h1>
+          <div style="height: 20px"> <p class="subtitle"><typical class="vt-subTitle" :steps="['web | mobile developer', 1000, 'computer science & economics student at FSEGA', 1000, 'professional keyboard stroker', 1000, 'casual internet surfer', 1000, '']" :loop=10000 :wrapper="'p'"></typical></p></div>
+           <div id="social-meida-container">
+            <a href="https://www.instagram.com/modurerares/"><unicon width="30" height="30" class="icon" name="instagram" /></a>
+            <a href="https://www.linkedin.com/in/modure-rares-778b16170/"><unicon width="30" height="30" class="icon" name="linkedin-alt" /></a>
+            <a href="https://github.com/RaresM2001"><unicon width="30" height="30" class="icon" name="github" /></a>
+          </div>
+           <img id="signature" src="../assets/images/signature.png" alt="image not found">
         </div>
-        <div id="social-meida-container">
+      </div>
+    </div>
+     <img id="mobile-signature" src="../assets/images/signature.png" alt="image not found">
+     <div id="mobile-social-media-container">
           <a href="https://www.instagram.com/modurerares/"><unicon width="30" height="30" class="icon" name="instagram" /></a>
           <a href="https://www.linkedin.com/in/modure-rares-778b16170/"><unicon width="30" height="30" class="icon" name="linkedin-alt" /></a>
           <a href="https://github.com/RaresM2001"><unicon width="30" height="30" class="icon" name="github" /></a>
         </div>
-        <img id="signature" src="../assets/images/signature.png" alt="image not found">
-      </div>
-    </div>
   </div>
 </template>
 
@@ -73,4 +79,54 @@ export default {
   fill: var(--primary);
 }
 
+#mobile-social-media-container,
+#mobile-signature {
+  display: none;
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    width: 96%;
+    margin-left: 2%;
+    position: relative;
+  }
+
+  #title-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 550px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  #title-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+
+
+  #signature {
+    width: 250px;
+    margin-top: 250px;
+    margin-left: calc(50% - 125px);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+
+  #title-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    padding-left: 5%;
+  }
+}
 </style>

@@ -20,6 +20,7 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 .overlay {
@@ -35,10 +36,11 @@ body {
   width: 100%;
   height: 100vh;
   background-color: black;
+  overflow: auto;
 }
 
 .container {
-    width: 100%;
+  width: 100%;
   max-width: 1000px;
   position: absolute;
   left: 50%;
@@ -159,6 +161,13 @@ span {
     left: -7px;
     clip: rect(31px, 9999px, 149px, 0);
   }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    width: 98%;
+    margin-left: 1%;
+   }
 }
 
 </style>

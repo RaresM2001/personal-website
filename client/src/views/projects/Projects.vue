@@ -18,9 +18,12 @@
          <div class="card">
           <div class="overlay"></div>
         </div>
+        <div class="clearfix"></div>
+         <mfooter></mfooter>
       </div>
     </div>
-    <mfooter></mfooter>
+    
+   
   </div>
 </template>
 <script>
@@ -33,8 +36,14 @@ export default {
 </script>
 <style scoped>
 
+.container {
+  margin-top: 0px;
+  top: 50px;
+}
+
 #cards-container {
   margin-top: 50px;
+  /* background-color: pink; */
 }
 
 .card {
@@ -78,29 +87,9 @@ export default {
   background-color: rgba(0, 0, 0, 0);
 }
 
-
-#signature {
-  width: 150px;
-  position: absolute;
-  left: 50%;
-  bottom: 50px;
-  transform: translateX(-50%);
-}
-
-#social-media-container {
-  position: absolute;
-  left: 50%;
-  bottom: 200px;
-  transform: translateX(-50%);
-}
-
-.icon {
-  margin-left: 50px;
-  fill: white;
-}
-
-.icon:hover {
-  fill: var(--primary);
+.clearfix {
+  content: "";
+  clear: both;
 }
 
 </style>

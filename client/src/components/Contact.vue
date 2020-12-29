@@ -3,13 +3,13 @@
     <div class="container">
       <unicon class="icon" name="times" width="50" height="50" @click="hideNavigation"/>
       <h1 class="title glitch" data-text="CONTACT ME"><span>CONTACT</span> ME</h1>
-     
       <input type="text" placeholder="your name" v-model="message.name">
       <input type="email" placeholder="your email address" v-model="message.email">
       <textarea placeholder="what can i do for you" v-model="message.content"></textarea>
       <button class="m-btn" @click="send">CONTACT</button>
-      <div class="clearfix"></div>
+       <div class="clearfix"></div>
       <img id="signature" src="../assets/images/signature.png" alt="Image not found">
+     
     </div>
    
   </div>
@@ -47,9 +47,9 @@ export default {
 <style scoped>
 .contact {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   position: absolute;
-  top: -100vh;
+  top: -10000px;
   z-index: 4;
   background-color: black;
   transition: all .8s;
@@ -61,6 +61,12 @@ export default {
 
 .title {
   display: block;
+}
+
+.container {
+  background-color: black;
+  top: 0;
+  margin-top: 50px;
 }
 
 .icon {
@@ -117,7 +123,8 @@ button {
 #signature {
   width: 150px;
   margin-left: calc(50% - 75px);
-  margin-top: 200px;
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .clearfix {
@@ -125,4 +132,36 @@ button {
   clear: both;
 }
 
+@media only screen and (max-width: 1400px) {
+  input, textarea, button {
+    width: 96%;
+    margin-right: 4%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  .icon {
+    margin-right: 4%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  .container {
+    margin-top: 0;
+    top: 30px;
+  }
+
+  #signature {
+    margin-top: 50px;
+  }
+}
 </style>

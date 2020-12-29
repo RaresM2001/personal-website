@@ -56,4 +56,15 @@ export default {
 #nav-container .title:hover {
   color: var(--primary);
 }
+
+@media only screen and (max-width: 1500px) {
+  .container {
+    width: 96%;
+    margin-left: 2%;
+  }
+
+  #navigation {
+    padding-right: 50px;
+  }
+}
 </style>
