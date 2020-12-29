@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const serveStatic = require('serve-static');
-const mailgunRouter = require('../router/mailgun');
+const mailgunRouter = require('./router/mailgun');
 
 const app = express();
 const PORT = process.env.PORT || 8082;
