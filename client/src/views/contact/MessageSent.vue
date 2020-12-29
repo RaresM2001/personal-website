@@ -3,30 +3,22 @@
     <div id="centered">
       <h1 class="title glitch" data-text="THANKS FOR REACHING OUT"><span>THANKS FOR REACHING</span> OUT</h1>
       <p class="subtitle"><typical class="vt-subTitle" :steps="['if i don\'t get back to you, call me: 0732717194']" :loop=1 :wrapper="'p'"></typical></p>
-     
     </div>
-     <div id="social-media-container">
-        <a href="https://www.instagram.com/modurerares/"><unicon width="30" height="30" class="icon" name="instagram" /></a>
-          <a href="https://www.linkedin.com/in/modure-rares-778b16170/"><unicon width="30" height="30" class="icon" name="linkedin-alt" /></a>
-          <a href="https://github.com/RaresM2001"><unicon width="30" height="30" class="icon" name="github" /></a>
-      </div>
-    <img id="signature" src="../../assets/images/signature.png" alt="Image not found">
+     <mfooter></mfooter>
   </div>
 </template>
 <script>
 import typical from 'vue-typical'
+import mfooter from '../../components/Footer';
+
 export default {
   components: {
-    typical
+    typical,
+    mfooter
   }
 }
 </script>
 <style scoped>
-.root {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-}
 
 #centered {
   width: 400px;

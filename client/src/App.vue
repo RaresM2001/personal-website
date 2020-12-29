@@ -22,18 +22,20 @@ body {
   padding: 0;
 }
 
-.icon {
-  fill: white;
-  float: left;
-  margin-right: 50px;
-  transition: all .4s;
-  cursor: pointer;
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 1;
 }
 
-.icon:hover {
-  fill: var(--primary);
+.root {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
 }
-
 
 .container {
     width: 100%;

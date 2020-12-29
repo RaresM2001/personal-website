@@ -2,7 +2,7 @@
   <div id="navigation">
     <div id="nav-container">
       <h1 class="title" @click="showNavbar">contact</h1>
-      <h1 class="title">projects</h1>
+      <router-link tag="h1" to="/projects" class="title">projects</router-link>
     </div>
   </div>
 </template>

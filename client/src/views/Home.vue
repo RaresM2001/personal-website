@@ -43,15 +43,6 @@ export default {
   position: relative;
 }
 
-.overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  background-color: rgba(0, 0, 0, .5);
-  z-index: 1;
-}
-
 #social-meida-container {
   margin-top: 30px;
 }
@@ -68,6 +59,18 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+}
+
+.icon {
+  fill: white;
+  float: left;
+  margin-right: 50px;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.icon:hover {
+  fill: var(--primary);
 }
 
 </style>
